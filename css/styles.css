@@ -1,0 +1,51 @@
+
+/* Font Family 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Mulish', sans-serif;
+*/
+
+.imgHotel {
+    width: 360px; 
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  color:#EB5757;
+}
+
+.titulo {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.puntuacion {
+    font-family: 'Montserrat';
+    color:#4F4F4F;
+}
+
+.camas, .tipo{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color:#828282;
+}
+
+.host{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #4F4F4F;
+    border: 1px solid #4F4F4F;
+    border-radius: 12px;
+}
