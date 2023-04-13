@@ -4,10 +4,16 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Mulish', sans-serif;
 */
 
-.imgHotel {
-    width: 360px; 
+.lugar1 {
+    height: 269px;
+}
+.card1 {
+    width: 360px;
+    padding: 0;
 }
 
+
+/* Estilo del icono de la estrella */
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,

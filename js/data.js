@@ -10,6 +10,7 @@ const getData = async () => {
     .then( json => json)
 
   return data;
+
 }
 
 export default {
