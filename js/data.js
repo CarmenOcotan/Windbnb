@@ -14,7 +14,7 @@ const getData = async () => {
 }
 
 //Voy a pedir los datos de las ciudades
-const cities = (data) =>{
+/* const cities = (data) =>{
   let ciudades = data.map( elem => elem.city);
 
   ciudades = new Set(ciudades);
@@ -26,10 +26,10 @@ const filtro = (filt) => {
   let filtered = city.filter(elem => elem.city === filt);
 
   return filtered
-}
+} */
 
 export default {
   getData,
-  cities,
-  filtro
+  /* cities,
+  filtro */
 }

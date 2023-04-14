@@ -28,8 +28,12 @@ font-family: 'Mulish', sans-serif;
 
 /* Estilo de los titulos y nombres*/
 
-.titulo {
+.titulo, .puntuacion, .camas, .tipo{
     font-family: 'Montserrat';
+}
+
+.titulo {
+    
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -37,12 +41,10 @@ font-family: 'Mulish', sans-serif;
 }
 
 .puntuacion {
-    font-family: 'Montserrat';
     color:#4F4F4F;
 }
 
 .camas, .tipo{
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -51,7 +53,6 @@ font-family: 'Mulish', sans-serif;
 }
 
 .host{
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
