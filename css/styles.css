@@ -12,6 +12,9 @@ font-family: 'Mulish', sans-serif;
     padding: 0;
 }
 
+.busqueda {
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
+}
 
 /* Estilo del icono de la estrella */
 .material-symbols-outlined {
@@ -23,11 +26,13 @@ font-family: 'Mulish', sans-serif;
   color:#EB5757;
 }
 
+/* Estilo de los titulos y nombres*/
+
 .titulo {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 20px;
 }
 
