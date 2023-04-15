@@ -13,7 +13,7 @@ const lugares = $('#lugares');
 const nCards = (obj) => {
     const div = elem('div');
     div.className = 'card1';
-
+    console.log(obj.beds)
     //Insertar al card los elementos
 div.innerHTML =`
     <div class="card1 col" > 
@@ -21,11 +21,13 @@ div.innerHTML =`
             <img src="${obj.photo}" class="w-100 h-100 rounded-4 " alt="${obj.title}">
         </div>
         <div class=" d-flex justify-content-between justify-content-evely flex-wrap mt-2 w-100">
-            <p class="${!obj.superHost ? 'd-none' : ''} host px-2 d-flex flex-wrap align-content-center">SUPER HOST</p>
-            <p>
-                <span class="tipo">${obj.type}</span>
-                <span class="${obj.beds === null ? 'd-none' : '.'} camas"></span>
-            </p>
+            <div class="d-flex gap-3">
+                <p class="${!obj.superHost ? 'd-none' : ''} host px-2 d-flex flex-wrap align-content-center">SUPER HOST</p>
+                <p>
+                    <span class="tipo">${obj.type}</span>
+                    <span class="camas ${obj.beds ? '' : 'd-none'}">.${obj.beds || ''}</span>
+                </p>
+            </div>
             <div class="valoracion d-flex  ">
                 <span class="material-symbols-outlined">star</span>
                 <span class="ms-1 puntuacion">${obj.rating}</span>
@@ -35,7 +37,7 @@ div.innerHTML =`
             <p class="titulo text-start">${obj.title}</p>
         </div>
     </div>`
-
+    
     return div
 
 }
