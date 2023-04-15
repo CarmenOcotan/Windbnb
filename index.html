@@ -46,10 +46,14 @@
     <article class="d-flex rounded-4 border busqueda">
       <p class="p-3 m-0 cursor-text">Add location</p>
       <p class="p-3 m-0 border-start border-end border-light-subtle user-select-none">Add guests</p>
+
       <!-- Icono Search de google Icons -->
-      <span class="material-symbols-outlined text-danger p-3 pointer">
-        search
-      </span>
+      <button type="button" class="btn p-0 " data-bs-toggle="modal" data-bs-target="#buscar">
+        <span class="material-symbols-outlined text-danger p-3 pointer ">
+          search
+        </span>
+      </button>
+      
     </article>
   </header>
 
@@ -68,7 +72,21 @@
         <!-- Aqui van los cards, cada uno debe llevar la clase 'col' -->
       </div>
     </section> 
-
+  
+    <!-- Modal -->
+    <div class="modal fade" id="buscar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen h-50 w-100">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 </body>
 </html>
