@@ -12,10 +12,13 @@ const lugares = $('#lugares');
 //Creamos el elemento
 const nCards = (obj) => {
     const div = elem('div');
+
     div.className = 'card1';
+    
     console.log(obj.beds)
+
     //Insertar al card los elementos
-div.innerHTML =`
+    div.innerHTML =`
     <div class="card1 col" > 
         <div class="lugar1">
             <img src="${obj.photo}" class="w-100 h-100 rounded-4 " alt="${obj.title}">

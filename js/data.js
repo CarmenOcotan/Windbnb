@@ -15,7 +15,7 @@ const getData = async () => {
 
 //Voy a pedir los datos de las ciudades
 /* const cities = (data) =>{
-  let ciudades = data.map( elem => elem.city);
+  let ciudades = data.map(elem => elem.city);
 
   ciudades = new Set(ciudades);
 

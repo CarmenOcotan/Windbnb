@@ -13,7 +13,7 @@ font-family: 'Mulish', sans-serif;
 }
 
 .busqueda {
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo del icono de la estrella */
@@ -68,4 +68,8 @@ font-family: 'Mulish', sans-serif;
     color: #4F4F4F;
     border: 1px solid #4F4F4F;
     border-radius: 12px;
+}
+
+.local {
+    display: flex;
 }

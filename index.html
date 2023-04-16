@@ -77,16 +77,30 @@
     <div class="modal fade" id="buscar" tabindex="-1">
       <div class="modal-dialog modal-fullscreen h-50 w-100">
         <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5">Modal title</h1>
-            <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-header border-0 d-flex justify-content-end ">
+              <span class="d-md-none">Edit your search</span>
+              <button type="button" class="btn-close d-md-none " data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            <span class="material-symbols-outlined">location_on</span>
-          </div>
+          <article class="d-flex rounded-4 border busqueda input-group">
+            
+            <div class="p-3 m-0 cursor-text">Location<input type="text" aria-label="First name" class="form-control" placeholder="Add Ciudad"></div>
+            <div class="p-3 m-0 border-start border-end ">GUESTS<input type="text" aria-label="Last name" class="form-control" placeholder="Add guest"></div>
+            <div>
+              <button type="button" class="btn p-0 d-flex justify-content-center">
+                <span class="material-symbols-outlined text-danger p-3 pointer">
+                  search
+                </span>
+              </button>
+            </div>
+            
+            
+          </article>
         </div>
+        
       </div>
     </div>
+
+
   </main>
 </body>
 </html>
