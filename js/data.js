@@ -14,22 +14,30 @@ const getData = async () => {
 }
 
 //Voy a pedir los datos de las ciudades
-/* const cities = (data) =>{
-  let ciudades = data.map(elem => elem.city);
 
-  ciudades = new Set(ciudades);
-
-  return ciudades
-};
-
-const filtro = (filt) => {
-  let filtered = city.filter(elem => elem.city === filt);
+const filtroCiudad = (arr, filtro) => {
+  let filtered = arr.filter(elem => elem.city.name === filtro);
 
   return filtered
-} */
+
+  
+}
+
+const cityUnica = (data) => {
+  let only = data.map( elem => elem.city.name);
+ 
+  // COnvertimos a SET para obtener las categorias sin valores repetidos
+  only = new Set(only);
+
+  // Convertimos el SET a un Array
+  only = ['a',...only];
+
+  return only
+};
+
 
 export default {
   getData,
-  /* cities,
-  filtro */
+  filtroCiudad,
+  cityUnica
 }

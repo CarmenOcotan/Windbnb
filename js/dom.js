@@ -14,8 +14,6 @@ const nCards = (obj) => {
     const div = elem('div');
 
     div.className = 'card1';
-    
-    console.log(obj.beds)
 
     //Insertar al card los elementos
     div.innerHTML =`
@@ -58,9 +56,46 @@ const mCards = (arr) => {
     })
   }
 
+const listaCiudades = $('#filtrarCiudad');
+
+const allCiudades = (ciudades) => {
+
+const city1 = ciudades.map(elem => {
+
+    const a = document.createElement('a');
+
+    a.className = 'city';
+
+    a.innerHTML = `
+      <a href="place" id="${elem}" class="list-group-item " ">
+        <span class="material-symbols-outlined city">location_on ${elem.city}</span>
+      </a>`;
+    return a;
+  });
+  return city1;
+  
+};
+
+const nCiudad = (cdad) => {
+
+    listaCiudades.innerHTML = '';
+
+const city2 = allCiudades(cdad);
+
+    city2.forEach(elem => {
+
+    listaCiudades.appendChild(elem);
+  });
+
+  console.log(nCiudad)
+    
+};
+
+
 export default {
     nCards,
     mCards,
+    nCiudad,
     $
 }
 

@@ -12,11 +12,12 @@ font-family: 'Mulish', sans-serif;
     padding: 0;
 }
 
-.busqueda {
+.busqueda, .search {
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    
 }
 
-/* Estilo del icono de la estrella */
+/* Icono de la estrella */
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
@@ -25,13 +26,18 @@ font-family: 'Mulish', sans-serif;
   'opsz' 48;
   color:#EB5757;
 }
-
-.material-symbols-outlined {
+/* Icono de busqueda */
+/* .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+  'GRAD' -25,
+  'opsz' 40
+} */
+
+
+.searchColor {
+    background-color:#EB5757;
 }
 
 /* Estilo de los titulos y nombres*/
@@ -72,4 +78,20 @@ font-family: 'Mulish', sans-serif;
 
 .local {
     display: flex;
+}
+
+.city {
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    color: #4F4F4F !important;
+}
+
+.box {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 200,
+  'opsz' 48;
+  color: #4F4F4F !important;
+
 }
