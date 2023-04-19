@@ -44,11 +44,11 @@
     </div>
 
     <article class="d-flex rounded-4 border busqueda">
-      <p class="p-3 m-0 cursor-text">Add location</p>
-      <p class="p-3 m-0 border-start border-end border-light-subtle user-select-none">Add guests</p>
+      <p class="p-3 m-0 cursor-text local1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" id="location1">Add location</p>
+      <p class="p-3 m-0 border-start border-end border-light-subtle user-select-none guest1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" id="guests2">Add guests</p>
 
       <!-- Icono Search de google Icons -->
-      <button type="button" class="btn p-0 " data-bs-toggle="modal" data-bs-target="#buscar">
+      <button type="button" class="btn p-0 " data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">
         <span class="material-symbols-outlined text-danger p-3 pointer ">
           search
         </span>
@@ -73,70 +73,71 @@
       </div>
     </section> 
   
-    <!-- Modal -->
-    <div class="modal fade" id="buscar" tabindex="-1">
-      <div class="modal-dialog modal-fullscreen h-75 w-100">
-        <div class="modal-content">
-          <div class="modal-header border-0 d-flex justify-content-end ">
-              <span class="d-sm-none">Edit your search</span>
-              <button type="button" class="btn-close d-sm-none " data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- offcanvas -->
+    
+    <div class="offcanvas offcanvas-top h-75" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title d-md-none" id="offcanvasTopLabel">Edit your search</h5>
+        <button type="button" class="btn-close d-md-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body conteiner-fluid d-flex flex-column">
+      
+        <!-- Voy a agregar un grid para las opciones de buscar -->
+
+        <form class="row d-flex rounded-4 border busqueda">
+          <div class="col-12 col-sm col-md">
+            <label for="addCity" class="form-label cities">LOCATION</label>
+            <input class="form-control placeholderLocation local1" list="lista" id="addCity" placeholder="Add Location" readonly>
           </div>
+          <div class="col-12 col-sm col-md ">
+            <label for="addGuests" class="form-label cities">GUESTS</label>
+            <input class="form-control placeholderGuest" list="mostrar" id="addGuests" placeholder="Add Guests" readonly onclick>
+          </div>
+          <div class="col-12 col-sm-12 col-md d-flex justify-content-center">
+            <button type="submit" class="btn searchColor text-light d-flex">
+              <span class="material-symbols-outlined text-light p-0">search</span>
+              Search
+            </button>
+          </div>
+        </form>
 
-          <div class="conteiner d-flex justify-content-center">
-            <div class="row rounded-4 busqueda w-75">
+        <!-- Agregar las ciudades y las Guests -->
 
-              <div class="col-sm-6 rounded-4 border-sm-bottom">
-                <p class="mb-1">LOCATION</p>
-                <!-- <input class="p-0 mb-1 form-control bg-ti-field border-0" id="addLocation" type="text" placeholder="Add Location"> -->
-                <div class="list-group border-none" id="filtrarCiudad">
-                  <a href="#" class="list-group-item " aria-current="true">
-                    <span class="material-symbols-outlined "></span>
-                  </a>
-                </div>
+        <article class="row d-flex">
+          <div class="col-4 list border-none pt-5" id="filtrarCiudad">
+            <ul class="lista" id="lista">
+              <!-- <span class="material-symbols-outlined city4">location_on</span> -->
+            </ul>
+          </div>
+          <div class="col-4 pt-5" id="mostrar">
+            <div class="container d-flex flex-column">
+              <p class="d-flex flex-column">
+                <span>Adults</span>
+                 <span>Ages 13 or above</span> 
+              </p>
+              <div class="d-flex">
+                <span class="material-symbols-outlined box me-2 pe-none menos" aria-disabled="true" id="menosA">indeterminate_check_box</span>
+                <p id="adult">0</p>
+                <span class="material-symbols-outlined box ms-2 pe-none mas" aria-disabled="true" id="masA">add_box</span>
               </div>
-
-              <div class="col-sm-6 border-start border-end border-light-subtle list-group ">
-                <p class="mb-1">GUESTS</p>
-                <input class=" border-0 p-0 mb-1 form-control bg-ti-field" id="addGuests" type="text">
-                <div class="">
-                  <div class="container d-flex flex-column">
-                    <p class="d-flex flex-column">
-                      <span>Adults</span>
-                       <span>Ages 13 or above</span> 
-                    </p>
-                    <div class="d-flex">
-                      <span class="material-symbols-outlined box me-2 pe-none" aria-disabled="true">indeterminate_check_box</span>o
-                      <span class="material-symbols-outlined box ms-2 pe-none" aria-disabled="true">add_box</span>
-                    </div>
-                  </div>
-                  <div class="container d-flex flex-column pt-3">
-                    <p class="d-flex flex-column">
-                      <span>Children</span>
-                       <span>Ages 2-12</span> 
-                    </p>
-                    <div class="d-flex ">
-                      <span class="material-symbols-outlined box me-2 pe-none" aria-disabled="true">indeterminate_check_box</span>o
-                      <span class="material-symbols-outlined box ms-2 pe-none" aria-disabled="true">add_box</span>
-                    </div>
-                  </div>
-                </div>
+            </div>
+            <div class="container d-flex flex-column pt-3">
+              <p class="d-flex flex-column">
+                <span>Children</span>
+                 <span>Ages 2-12</span> 
+              </p>
+              <div class="d-flex ">
+                <span class="material-symbols-outlined box me-2 pe-none menos" aria-disabled="true" id="menosC">indeterminate_check_box</span>
+                <p id="child">0</p>
+                <span class="material-symbols-outlined box ms-2 pe-none mas" aria-disabled="true" id="masC">add_box</span>
               </div>
-              <div class="col rounded-4  d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x">
-                <div class="rounded-4 d-flex justify-content-center align-items-center searchColor w-50">
-                  <span class="material-symbols-outlined text-light p-3 pointer ">
-                    search
-                    </span>
-                    <p class="m-0 text-light">Search</p>
-                </div>
-              </div>
-
             </div>
           </div>
-        </div>
+        </article>
+
       </div>
     </div>
-
-
+    
   </main>
 </body>
 </html>

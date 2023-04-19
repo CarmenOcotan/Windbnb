@@ -4,18 +4,19 @@ con la manipulación del DOM en la aplicación
 */
 const $ = (selector) => document.querySelector(selector);
 
-//Traemos el elemento de html por su id
-const elem = tag => document.createElement(tag);
-
 const lugares = $('#lugares');
+
+//Traemos el elemento de html por su id
+const Nelem = tag => document.createElement(tag);
+
 
 //Creamos el elemento
 const nCards = (obj) => {
-    const div = elem('div');
+    const div = Nelem('div');
 
     div.className = 'card1';
 
-    //Insertar al card los elementos
+    //Insertar al card los elementos    
     div.innerHTML =`
     <div class="card1 col" > 
         <div class="lugar1">
@@ -30,13 +31,13 @@ const nCards = (obj) => {
                 </p>
             </div>
             <div class="valoracion d-flex  ">
-                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined star">star</span>
                 <span class="ms-1 puntuacion">${obj.rating}</span>
             </div>
         </div>
         <div>
             <p class="titulo text-start">${obj.title}</p>
-        </div>
+        </div> 
     </div>`
     
     return div
@@ -56,46 +57,26 @@ const mCards = (arr) => {
     })
   }
 
-const listaCiudades = $('#filtrarCiudad');
+
 
 const allCiudades = (ciudades) => {
 
-const city1 = ciudades.map(elem => {
+  const listaCiudades = $('#lista');
 
-    const a = document.createElement('a');
+      ciudades.forEach( elem => {
+        const li = Nelem('li');
+        li.className =`city3 list-unstyled">
+            <span class="material-symbols-outlined city4">location_on</span> ${elem}`;
+        li.innerHTML = elem;
 
-    a.className = 'city';
-
-    a.innerHTML = `
-      <a href="place" id="${elem}" class="list-group-item " ">
-        <span class="material-symbols-outlined city">location_on ${elem.city}</span>
-      </a>`;
-    return a;
-  });
-  return city1;
-  
+        listaCiudades.appendChild(li)
+      })  
 };
-
-const nCiudad = (cdad) => {
-
-    listaCiudades.innerHTML = '';
-
-const city2 = allCiudades(cdad);
-
-    city2.forEach(elem => {
-
-    listaCiudades.appendChild(elem);
-  });
-
-  console.log(nCiudad)
-    
-};
-
 
 export default {
     nCards,
     mCards,
-    nCiudad,
+    allCiudades,
     $
 }
 
