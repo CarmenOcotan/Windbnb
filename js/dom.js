@@ -27,7 +27,7 @@ const nCards = (obj) => {
                 <p class="${!obj.superHost ? 'd-none' : ''} host px-2 d-flex flex-wrap align-content-center">SUPER HOST</p>
                 <p>
                     <span class="tipo">${obj.type}</span>
-                    <span class="camas ${obj.beds ? '' : 'd-none'}">  .  ${obj.beds || ''}</span>
+                    <span class="camas ${obj.beds ? '' : 'd-none'}">.${obj.beds || ''}</span>
                 </p>
             </div>
             <div class="valoracion d-flex  ">
@@ -59,33 +59,32 @@ const mCards = (arr) => {
 
 
 
- const allCiudades = (ciudades) => {
+  const allCiudades = (ciudades) => {
 
-  const listaCiudades = $('#lista');
-
-      ciudades.forEach( elem => {
-        const li = Nelem('li');
-        li.className =`city3 list-unstyled `;
-        li.innerHTML = `${elem}, Finland`;
-        /* <span class="material-symbols-outlined city4">location_on</span> */
-         listaCiudades.appendChild(li)
-      }) 
-     
-};
-/*       const  allCiudades = (ciudades) =>{
-
-        const listaCiudades = $('#lista');  
-
+    const listaCiudades = $('#lista');
+  
         ciudades.forEach( elem => {
           const li = Nelem('li');
-          li.className="city3"
-          li.innerHTML = `<a class="text-decoration-none text-reset city3" href="#${elem}"><span class="material-symbols-outlined added">location_on </span> ${elem}, Finland</a>`;
-          listaCiudades.appendChild(li)
-         
-        });
-        return allCiudades;
-      } */
-      
+          li.className =`city3 list-unstyled p-2`;
+          li.innerHTML = `${elem}, Finland`;
+          /* <span class="material-symbols-outlined city4">location_on</span> */
+           listaCiudades.appendChild(li)
+        }) 
+  };
+
+/* const addGuests =$('#addGuests');
+const guests2 = $('#guests2');
+
+const addCiudad = $('#lista')
+const location1 =$('#location1')
+
+none.addEventListener('click', () => {
+    if(addGuests === 'd-block' && guests2 ==='d-block'){
+        addCiudad === 'd-none'&& location1 === 'd-none'
+    }else if(location1 === 'd-block' && addCiudad ==='d-block'){
+         addGuests === 'd-none'&& guests2 === 'd-none'
+    }
+    }); */
 
 export default {
     nCards,
