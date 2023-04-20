@@ -131,10 +131,10 @@ masC.addEventListener('click', () => {
 
 //MODO OSCURO
 
-/* const html = document.querySelector("html");
+const html = document.querySelector("html");
 
 const Dark = document.querySelector('#switch');
 
 Dark.addEventListener("click", () => {
   html.dataset.bsTheme = html.dataset.bsTheme == "light" ? "dark" : "light";
-}) */
+})
