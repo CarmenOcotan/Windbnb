@@ -13,7 +13,6 @@ const getData = async () => {
 
 }
 
-
 const cityUnica = (data) => {
   let only = data.map( elem => elem.city);
  
@@ -26,23 +25,6 @@ const cityUnica = (data) => {
   return only
 };
 
-const getGuests = (data) => {
-  let guests0= data.map(elem => elem.maxGuests);
-
-  return guests0;
-  
-}
-
-
-//Voy a pedir los datos de las ciudades
-
-/* const filtrar = (arr, filtro) => {
-
-  let filtered = arr.filter( elem => elem.city === filtro);
-  
-  return filtered
-}
- */
 
 const filtrar = (arr, filtro) => {
   if (!Array.isArray(arr)) {
@@ -59,13 +41,11 @@ const filGuests = (arr, filtro) => {
   
   return filtered 
   }
-  
 
 
 export default {
   getData,
   filtrar,
   cityUnica,
-  filGuests,
-  getGuests
+  filGuests
 }

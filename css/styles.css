@@ -122,3 +122,10 @@ font-family: 'Mulish', sans-serif;
     font-size: 14px;
     line-height: 18px;
 }
+
+.prueba {
+    width: 110px;
+    height: 48px;
+    background: rgba(235, 87, 87, 0.9);
+    border-radius: 16px;
+}
