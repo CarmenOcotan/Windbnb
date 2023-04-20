@@ -27,9 +27,10 @@ font-family: 'Mulish', sans-serif;
   color:#EB5757;
 }
 
-.searchColor {
+/* .searchColor {
     background-color:#EB5757;
-}
+    display: block;
+} */
 
 
 /* Estilo de los titulos y nombres*/
@@ -82,16 +83,23 @@ font-family: 'Mulish', sans-serif;
 
 .city3 {
     list-style-type: none;
-    cursor: pointer
+    cursor: pointer;
+    font-family: 'Mulish', sans-serif;;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #4F4F4F;
 }
 
 .box {
-  color: #4F4F4F;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48;
+    width: 23px;
+    height: 23px;
+    
+    border: 1px solid #828282;
+    border-radius: 4px;
+
+    cursor: pointer;
 }
 
 .cities {

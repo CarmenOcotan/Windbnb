@@ -54,9 +54,74 @@
         </span>
       </button>
       
-    </article>
-  </header>
+       <!-- offcanvas -->
+    
+   <div class="offcanvas offcanvas-top h-75" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+  
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title d-md-none" id="offcanvasTopLabel">Edit your search</h5>
+      <button type="button" class="btn-close d-md-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body conteiner-fluid d-flex flex-column">
+    
+      <!-- Voy a agregar un grid para las opciones de buscar -->
 
+      <form class="row d-flex rounded-4 border busqueda">
+        <div class="col-12 col-sm col-md">
+          <label for="addCity" class="form-label cities">LOCATION</label>
+          <p class="form-control local1" list="lista" id="addCity" >Add Location</p>
+        </div>
+        <div class="col-12 col-sm col-md ">
+          <label for="addGuests" class="form-label cities">GUESTS</label>
+          <p class="form-control placeholderGuest" list="mostrar" id="addGuests">Add Guests</p>
+        </div>
+        <div class="col-12 col-sm-12 col-md d-flex justify-content-center">
+          <button  type="button" class="btn  btn-danger d-flex" data-bs-dismiss="modal" id="buscar">
+            <span class="material-symbols-outlined text-light p-0">search</span>
+            Search
+          </button>
+        </div>
+      </form>
+
+      <!-- Agregar las ciudades y las Guests -->
+
+      <article class="row d-flex">
+        <div class="col-4 list border-none pt-5" id="filtrarCiudad">
+          <ul class="lista" id="lista">
+            <!-- <span class="material-symbols-outlined city4">location_on</span> -->
+          </ul>
+        </div>
+        <div class="col-4 pt-5" id="mostrar">
+          <div class="container d-flex flex-column">
+            <p class="d-flex flex-column">
+              <span>Adults</span>
+               <span>Ages 13 or above</span> 
+            </p>
+            <div class="d-flex">
+              <span class=" box d-flex justify-content-center align-items-center me-2  menos"  id="menosA">-</span>
+              <p id="adult">0</p>
+              <span class=" box d-flex justify-content-center align-items-center ms-2  mas" id="masA">+</span>
+            </div>
+          </div>
+          <div class="container d-flex flex-column pt-3">
+            <p class="d-flex flex-column">
+              <span>Children</span>
+               <span>Ages 2-12</span> 
+            </p>
+            <div class="d-flex ">
+              <span class=" box d-flex justify-content-center align-items-center me-2 menos"  id="menosC">-</span>
+              <p id="child">0</p>
+              <span class=" box d-flex justify-content-center align-items-center ms-2 mas button"  id="masC">+</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+    </article>
+  
+  </header>
   <main>
     <div class="d-flex mt-5 justify-content-between">
       <h1 class="fs-3">Stays in 
@@ -73,71 +138,7 @@
       </div>
     </section> 
   
-    <!-- offcanvas -->
-    
-    <div class="offcanvas offcanvas-top h-75" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title d-md-none" id="offcanvasTopLabel">Edit your search</h5>
-        <button type="button" class="btn-close d-md-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body conteiner-fluid d-flex flex-column">
-      
-        <!-- Voy a agregar un grid para las opciones de buscar -->
-
-        <form class="row d-flex rounded-4 border busqueda">
-          <div class="col-12 col-sm col-md">
-            <label for="addCity" class="form-label cities">LOCATION</label>
-            <input class="form-control placeholderLocation local1" list="lista" id="addCity" placeholder="Add Location" readonly>
-          </div>
-          <div class="col-12 col-sm col-md ">
-            <label for="addGuests" class="form-label cities">GUESTS</label>
-            <input class="form-control placeholderGuest" list="mostrar" id="addGuests" placeholder="Add Guests" readonly onclick>
-          </div>
-          <div class="col-12 col-sm-12 col-md d-flex justify-content-center">
-            <button type="submit" class="btn searchColor text-light d-flex">
-              <span class="material-symbols-outlined text-light p-0">search</span>
-              Search
-            </button>
-          </div>
-        </form>
-
-        <!-- Agregar las ciudades y las Guests -->
-
-        <article class="row d-flex">
-          <div class="col-4 list border-none pt-5" id="filtrarCiudad">
-            <ul class="lista" id="lista">
-              <!-- <span class="material-symbols-outlined city4">location_on</span> -->
-            </ul>
-          </div>
-          <div class="col-4 pt-5" id="mostrar">
-            <div class="container d-flex flex-column">
-              <p class="d-flex flex-column">
-                <span>Adults</span>
-                 <span>Ages 13 or above</span> 
-              </p>
-              <div class="d-flex">
-                <span class="material-symbols-outlined box me-2 pe-none menos" aria-disabled="true" id="menosA">indeterminate_check_box</span>
-                <p id="adult">0</p>
-                <span class="material-symbols-outlined box ms-2 pe-none mas" aria-disabled="true" id="masA">add_box</span>
-              </div>
-            </div>
-            <div class="container d-flex flex-column pt-3">
-              <p class="d-flex flex-column">
-                <span>Children</span>
-                 <span>Ages 2-12</span> 
-              </p>
-              <div class="d-flex ">
-                <span class="material-symbols-outlined box me-2 pe-none menos" aria-disabled="true" id="menosC">indeterminate_check_box</span>
-                <p id="child">0</p>
-                <span class="material-symbols-outlined box ms-2 pe-none mas" aria-disabled="true" id="masC">add_box</span>
-              </div>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-    
   </main>
+
 </body>
 </html>
